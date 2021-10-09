@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular IMC</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <section class="estrutura">
+        <h1>Calculo de IMC</h1> 
+        <input type="number" placeholder="peso" class="peso"> 
+        <input type="number" placeholder="altura" class="altura">
+        <input type="submit" value="calcular" class="enviar">
+        <article id="res"></article>
+    </section>
+
+    <script>
+        var res = window.document.querySelector("article#res")
+        var enviar = window.document.querySelector("input.enviar")
+        enviar.addEventListener("click", func)
+
+        function func(){
+            // Pega o peso e a altura presente no input
+            var peso = Number(window.document.querySelector("input.peso").value)
+            var altura = Number(window.document.querySelector("input.altura").value)
+            // Faz o cálculo de IMC
+            var imc = peso/(altura*altura)
+            // Informa o estado da pessoa
+            if (imc){
+                res.innerHTML = `Peso: ${peso}Kg - Altura: ${altura.toFixed(2)}m<br>`
+                res.innerHTML += `Seu IMC(Índice de Massa Corporal) deu ${imc.toFixed(2)}Kg/m²<br>`
+                if (imc < 18.5){
+                    res.innerHTML += "<mark>Você está Abaixo do peso</mark>"
+                }
+
+                else if (imc < 25){
+                    res.innerHTML += "<mark>Você está no peso Ideal</mark>"
+                }
+
+                else if (imc <= 30){
+                    res.innerHTML += "<mark>Você está com Sobrepeso</mark>"
+                }
+
+                else if (imc <= 40){
+                    res.innerHTML += "<mark>Você está com Obesidade</mark>"
+                }
+
+                else{
+                    res.innerHTML += "<mark>Você está com Obesidade Mórbida</mark>"
+                }
+            }
+            else{
+                res.innerHTML = "Por favor digite algo válido"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    background-color: #9827;
+}
+
+body section.estrutura{
+    width: 90%;
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
+
+body section.estrutura h1{
+    font: normal 30pt arial;
+}
+
+body section.estrutura input{
+    height: 30px;
+}
+
+body section.estrutura .enviar{
+    border: none;
+    background-color: green;
+    color: #fff;
+    height: 35px;
+}
+
+body section.estrutura article#res{
+    margin-top: 30px;
+}
