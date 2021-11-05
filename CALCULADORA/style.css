@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+}
+
+h1{
+    text-align: center;
+    font: Arial 30pt normal;
+    padding: 20px 0 20px 0;
+}
+
+.estrutura{
+    margin: 0 auto 0 auto;
+    width: 50%;
+    background: linear-gradient(to right, silver, gray);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#entrada{
+    width: 85%;
+    height: 100px;
+    margin-top: 40px;
+    font-size: 70px;
+    text-align: right;
+    padding: 8px;
+}
+
+.estrutura .botoes{
+    display: flex;
+    width: 85%;
+    margin: 50px 0 50px 0;
+}
+
+.estrutura article{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.estrutura article div{
+    width: 22%;
+    text-align: center;
+    font-size: 50px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+#num-0{
+    width: 48%;
+}
+
+.estrutura article.operacoes div{
+    width: 30%;
+}
+
+.estrutura article.operacoes div#espaco{
+    margin-top: -30px;
+}
+
+.estrutura article.operacoes div#op-i{
+    background-color: yellow;
+}
+
+.estrutura article.operacoes div#op-c{
+    background-color: red;
+}
+
+.estrutura article.operacoes div#op-ce{
+    background-color: blue;
+}
+
+
+.estrutura article.operacoes div#op-s, .estrutura article.operacoes div#espaco{
+    background-color: green;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: grey;
+    color: #fff;
+    text-align: center;
+    margin-top: 100px;
+    line-height: 100px;
+}
