@@ -92,3 +92,15 @@ footer{
     margin-top: 100px;
     line-height: 100px;
 }
+
+
+/*
+ * Tratando a Responsividade em dispositivos de tela pequena.
+*/
+@media (max-width: 800px){
+
+    .estrutura{
+        width: 90%;
+    }
+
+}
