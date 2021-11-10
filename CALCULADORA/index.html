@@ -7,38 +7,38 @@
     <title>Calculadora</title>
 </head>
 <body>
-    <h1>Calculadora</h1>
+    <h1>Calculadora Básica</h1>
 
     <!-- Estrutura Geral da Calculadora -->
         <section class="estrutura">
-            <input type="number" placeholder="0" id="entrada">
+            <div id="visor">0</div>
 
             <!-- Botões -->
                 <section class="botoes">
 
                     <article class="nums">
-                        <div id="num-1">7</div>
-                        <div id="num-2">8</div>
-                        <div id="num-3">9</div>
-                        <div id="num-4">4</div>
-                        <div id="num-5">5</div>
-                        <div id="num-6">6</div>
-                        <div id="num-7">1</div>
-                        <div id="num-8">2</div>
-                        <div id="num-9">3</div>
-                        <div id="num-0">0</div>
+                        <div id="num-7" onclick="valor(7)">7</div>
+                        <div id="num-8" onclick="valor(8)">8</div>
+                        <div id="num-9" onclick="valor(9)">9</div>
+                        <div id="num-4" onclick="valor(4)">4</div>
+                        <div id="num-5" onclick="valor(5)">5</div>
+                        <div id="num-6" onclick="valor(6)">6</div>
+                        <div id="num-1" onclick="valor(1)">1</div>
+                        <div id="num-2" onclick="valor(2)">2</div>
+                        <div id="num-3" onclick="valor(3)">3</div>
+                        <div id="num-0" onclick="valor(0)">0</div>
                         <div id=".">.</div>
                     </article>
 
                     <article class="operacoes">
-                        <div id="op-ce">ce</div>
+                        <div id="op-ce" onclick="op('limpar')">ce</div>
                         <div id="op-c">c</div>
-                        <div id="op-b">/</div>
-                        <div id="op-a">*</div>
-                        <div id="op-m">-</div>
-                        <div id="op-s">+</div>
-                        <div id="op-i">=</div>
-                        <div id="espaco"></div>
+                        <div id="op-b" onclick="op('divisao')">/</div>
+                        <div id="op-a" onclick="op('multiplicacao')">*</div>
+                        <div id="op-m" onclick="op('subtracao')">-</div>
+                        <div id="op-s" onclick="op('adicao')">+</div>
+                        <div id="op-i" onclick="resultado()">=</div>
+                        <div id="espaco" onclick="op('adicao')"></div>
                     </article>
 
                 </section>
@@ -51,5 +51,6 @@
         <p>Feito por mim</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
