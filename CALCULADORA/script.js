@@ -30,25 +30,31 @@ function limpar(arg){
 // Salva a operação desejada(+-/*) na variável, Mostra o resultado da operação no visor.
 function resultado_operacao(arg){
     if(arg != '='){
-        operacao = arg
-        visor.innerHTML += ` ${arg} `
+        if(operacao == ''){
+            operacao = arg
+            visor.innerHTML += ` ${arg} `
+        }
     }
     else{
         if(operacao == '+'){
-            visor.innerHTML = Number(n1) + Number(n2)
-            n1 = Number(n1) + Number(n2)
+            result = Number(n1) + Number(n2)
+            visor.innerHTML = result
+            n1 = String(result)
         }
         else if(operacao == '-'){
-            visor.innerHTML = Number(n1) - Number(n2)
-            n1 = Number(n1) - Number(n2)
+            result = Number(n1) - Number(n2)
+            visor.innerHTML = result
+            n1 = String(result)
         }
         else if(operacao == '*'){
-            visor.innerHTML = Number(n1) * Number(n2)
-            n1 = Number(n1) * Number(n2)
+            result = Number(n1) * Number(n2)
+            visor.innerHTML = result
+            n1 = String(result)
         }
         else if(operacao == '/'){
-            visor.innerHTML = Number(n1) / Number(n2)
-            n1 = Number(n1) / Number(n2)
+            result = Number(n1) / Number(n2)
+            visor.innerHTML = result
+            n1 = String(result)
         }
         n2 = ''
         operacao = ''
