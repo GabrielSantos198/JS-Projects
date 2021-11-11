@@ -16,26 +16,10 @@ function valor(num){
 }
 
 
-// Salva a operação desejada na variável ao mesmo tempo que mostra no visor.
-function op(str){
-    if(str == "adicao"){
-        operacao = '+'
-        visor.innerHTML += ' + '
-    }
-    else if(str == "subtracao"){
-        operacao = '-'
-        visor.innerHTML += ' - '
-    }
-    else if(str == "multiplicacao"){
-        operacao = '*'
-        visor.innerHTML += ' * '
-    }
-    else if(str == "divisao"){
-        operacao = '/'
-        visor.innerHTML += ' / '
-    }
-    else if(str == "limpar"){
-        visor.innerHTML = '0'
+// Limpar
+function limpar(arg){
+    if(arg == "ce"){
+        visor.innerHTML = 0
         n1 = ''
         n2 = ''
         operacao = ''
@@ -43,31 +27,30 @@ function op(str){
 }
 
 
-// Calcula e mostra o resultado no Visor.
-function resultado(){
-    if(operacao == "+"){
-        visor.innerHTML = Number(n1) + Number(n2)
-        n1 = Number(n1) + Number(n2)
-        n2 = ''
-        operacao = ''
+// Salva a operação desejada(+-/*) na variável, Mostra o resultado da operação no visor.
+function resultado_operacao(arg){
+    if(arg != '='){
+        operacao = arg
+        visor.innerHTML += ` ${arg} `
     }
-    else if(operacao == "-"){
-        visor.innerHTML = Number(n1) - Number(n2)
-        n1 = Number(n1) - Number(n2)
-        n2 = ''
-        operacao = ''
-    }
-    else if(operacao == "*"){
-        visor.innerHTML = Number(n1) * Number(n2)
-        n1 = Number(n1) * Number(n2)
-        n2 = ''
-        operacao = ''
-    }
-    else if(operacao == "/"){
-        visor.innerHTML = Number(n1) / Number(n2)
-        n1 = Number(n1) / Number(n2)
+    else{
+        if(operacao == '+'){
+            visor.innerHTML = Number(n1) + Number(n2)
+            n1 = Number(n1) + Number(n2)
+        }
+        else if(operacao == '-'){
+            visor.innerHTML = Number(n1) - Number(n2)
+            n1 = Number(n1) - Number(n2)
+        }
+        else if(operacao == '*'){
+            visor.innerHTML = Number(n1) * Number(n2)
+            n1 = Number(n1) * Number(n2)
+        }
+        else if(operacao == '/'){
+            visor.innerHTML = Number(n1) / Number(n2)
+            n1 = Number(n1) / Number(n2)
+        }
         n2 = ''
         operacao = ''
     }
 }
-
