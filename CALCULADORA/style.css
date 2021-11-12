@@ -17,7 +17,7 @@ h1{
 
 .estrutura{
     margin: 0 auto 0 auto;
-    width: 50%;
+    width: 95%;
     background: linear-gradient(to right, silver, gray);
     border-radius: 10px;
     display: flex;
@@ -26,7 +26,7 @@ h1{
 }
 
 #visor{
-    width: 85%;
+    width: 90%;
     height: 100px;
     margin-top: 40px;
     background-color: #fff;
@@ -38,7 +38,7 @@ h1{
 
 .estrutura .botoes{
     display: flex;
-    width: 85%;
+    width: 90%;
     margin: 50px 0 50px 0;
 }
 
@@ -99,10 +99,10 @@ footer{
 /*
  * Tratando a Responsividade em dispositivos de tela pequena.
 */
-@media (max-width: 800px){
+@media (min-width: 850px){
 
     .estrutura{
-        width: 90%;
+        width: 50%;
     }
 
 }

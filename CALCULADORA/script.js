@@ -5,24 +5,60 @@ operacao = ''
 
 // Salva os valores nas devidas variáveis ao mesmo tempo que mostra no visor.
 function valor(num){
-    if(operacao == ''){
-        n1 += num
-        visor.innerHTML = `${n1}`
+    if(operacao == ""){
+        if(num == "."){
+            if(n1.indexOf(".") == -1){
+                n1 += num
+                visor.innerHTML = `${n1}`
+            }
+        }
+        else{
+            n1 += num
+            visor.innerHTML = `${n1}`
+        }
     }
     else{
-        n2 += num
-        visor.innerHTML = `${n1} ${operacao} ${n2}`
+        if(num == "."){
+            if(n2.indexOf(".") == -1){
+                n2 += num
+                visor.innerHTML = `${n1} ${operacao} ${n2}`
+            }
+        }
+        else{
+            n2 += num
+            visor.innerHTML = `${n1} ${operacao} ${n2}`
+        }
     }
 }
 
 
 // Limpar
 function limpar(arg){
-    if(arg == "ce"){
+    if(arg == "c"){
         visor.innerHTML = 0
         n1 = ''
         n2 = ''
         operacao = ''
+    }
+    else{
+        if(n2){
+            var ult = n2.substring(0,n2.length-1)
+            n2 = ult
+            visor.innerHTML = `${n1} ${operacao} ${n2}`
+        }
+        else if(operacao){
+            operacao = ''
+            visor.innerHTML = `${n1} ${operacao} ${n2}`
+        }
+        else if(n1.length > 1){
+            var ult = n1.substring(0,n1.length-1)
+            n1 = ult
+            visor.innerHTML = `${n1} ${operacao} ${n2}`
+        }
+        else{
+            n1 = ''
+            visor.innerHTML = 0
+        }
     }
 }
 
